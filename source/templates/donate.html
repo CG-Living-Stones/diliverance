@@ -3,8 +3,8 @@
     <header id="cs-navigation">
         <div class="cs-container">
             <!--Nav Logo-->
-            <a href="home" class="cs-logo" aria-label="back to home">
-                <img src="/static/images/Project_Diliverance.png" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            <a href="{{ url_for('home') }}" class="cs-logo" aria-label="back to home">
+                <img src="{{ url_for('static', filename='images/Project_Diliverance.png') }}" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
             </a>
             <!--Navigation List-->
             <nav class="cs-nav" role="navigation">
@@ -20,29 +20,29 @@
                 <div class="cs-ul-wrapper">
                     <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                         <li class="cs-li">
-                            <a href="home" class="cs-li-link">
+                            <a href="{{ url_for('home') }}" class="cs-li-link">
                                 Home
                             </a>
                         </li>
                         <li class="cs-li">
-                            <a href="aboutdili" class="cs-li-link">
+                            <a href="{{ url_for('aboutdili') }}" class="cs-li-link">
                                 About Dili
                             </a>
                         </li>
                         <li class="cs-li">
-                            <a href="events" class="cs-li-link">
+                            <a href="{{ url_for('events') }}" class="cs-li-link">
                                 Events
                             </a>
                         </li>
                         <li class="cs-li">
-                            <a href="meettheteam" class="cs-li-link">
+                            <a href="{{ url_for('meettheteam') }}" class="cs-li-link">
                                 Meet The Team
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            <a href="contribute" class="cs-button-solid cs-nav-button">Support Us</a>
+            <a href="{{ url_for('contribute') }}" class="cs-button-solid cs-nav-button">Support Us</a>
         </div>
     </header>
     <head>

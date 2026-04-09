@@ -21,7 +21,7 @@
             </p>
             <div class="cs-button-group">
                 <a onclick="location.href='#about-project-diliverance'" class="cs-button-solid cs-button">Explore More</a>
-                <a href="contribute" class="cs-button-transparent cs-button">
+                <a href="{{ url_for('contribute') }}" class="cs-button-transparent cs-button">
                     <img class="cs-img" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17" height="17">
                     Support Us
                 </a>
@@ -74,7 +74,7 @@
                 Project Diliverance in 2025 returns with another trip to Dili from <b>June 3 to 10</b>, where we will be continuing our work with the children and youth of Cocoon. 
                 Our mission also extends to empowering young adults by providing vocational training, helping them establish self-reliant, sustainable livelihoods.
             </p>
-            <a href="contribute" class="cs-button-solid">Support Us</a>
+            <a href="{{ url_for('contribute') }}" class="cs-button-solid">Support Us</a>
         </div>
     </div>
 </section>
@@ -159,7 +159,7 @@
     <div class="cs-container">
         <div class="cs-content">
             <h2 class="cs-title">Find Out More About Project Diliverance 2023</h2>
-            <a href="events" class="cs-button-solid">Let's Go!</a>
+            <a href="{{ url_for('events') }}" class="cs-button-solid">Let's Go!</a>
         </div>
     </div>
     <!--SVG Waves Background-->
@@ -180,7 +180,7 @@
             <p class="cs-text">
                 Find out more about the needs of Dili, the capital of Timor Leste.
             </p>
-            <a href="aboutdili" class="cs-button-solid">Where Again?</a>
+            <a href="{{ url_for('aboutdili') }}" class="cs-button-solid">Where Again?</a>
         </div>
         <div class="cs-gallery">
             <picture class="cs-picture">
@@ -243,7 +243,7 @@
                 to be a holy priesthood, offering spiritual sacrifices acceptable to God through Jesus Christ"
                 <span class="cs-name">1 Peter 2:4-5</span>
             </p>
-            <a href="meettheteam" class="cs-button-solid">Read Our Testimonies</a>
+            <a href="{{ url_for('meettheteam') }}" class="cs-button-solid">Read Our Testimonies</a>
         </div>
     </div>
 </section>
