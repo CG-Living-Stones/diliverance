@@ -588,3 +588,108 @@ html {
     gap: clamp(1rem, 2.3vw, 1.25rem);
   }
 }
+
+/* Mobile - Under 1024px */
+@media only screen and (max-width: 63.9375rem) {
+    .cs-dropdown {
+        cursor: pointer;
+    }
+
+    /* Hide the dropdown by default on mobile */
+    .cs-drop-ul {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: height 0.3s, opacity 0.3s, visibility 0.3s, padding 0.3s;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* Show the dropdown when the parent has the .cs-active class */
+    .cs-dropdown.cs-active .cs-drop-ul {
+        height: auto;
+        margin-top: 12px;
+        padding: 12px 20px;
+        opacity: 1;
+        visibility: visible;
+        background-color: #f7f7f7; /* Slight contrast for the accordion area */
+    }
+
+    /* Rotate the icon on mobile when active */
+    .cs-dropdown.cs-active .cs-drop-icon {
+        transform: rotate(180deg);
+    }
+
+    .cs-drop-link {
+        font-size: 14px;
+        text-decoration: none;
+        color: #1a1a1a;
+        display: block;
+    }
+}
+
+/* Desktop - 1024px+ */
+@media only screen and (min-width: 64rem) {
+    .cs-dropdown {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .cs-dropdown:hover .cs-drop-ul {
+        transform: scaleY(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cs-dropdown:hover .cs-drop-icon {
+        transform: rotate(180deg);
+    }
+
+    .cs-drop-icon {
+        width: 12px;
+        height: auto;
+        display: inline-block;
+        transition: transform 0.3s;
+    }
+
+    .cs-drop-ul {
+        min-width: 200px;
+        margin: 0;
+        padding: 12px 0;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        opacity: 0;
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+    }
+
+    .cs-drop-li {
+        list-style: none;
+        width: 100%;
+    }
+
+    .cs-drop-link {
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px 20px;
+        color: #1a1a1a;
+        display: block;
+        transition: color 0.3s, background-color 0.3s;
+    }
+
+    .cs-drop-link:hover {
+        color: #ff6b00; /* Match your brand color */
+        background-color: #f7f7f7;
+    }
+}

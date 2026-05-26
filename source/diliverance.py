@@ -14,9 +14,18 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route('/events')
+@app.route('/events/2023')
+def events2023():
+    return render_template('events/events2023.html')
+
+@app.route('/events/2025')
+def events2025():
+    return render_template('events/events2025.html')
+
+@app.route('/events/') 
+@app.route('/events/2026')
 def events():
-    return render_template('events.html')
+    return render_template('events/events2026.html')
 
 @app.route('/meettheteam')
 def team():
