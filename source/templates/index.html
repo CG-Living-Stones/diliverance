@@ -247,50 +247,6 @@
         </div>
     </div>
 </section>
-
-
-
-<!-- ============================================ -->
-<!--                  Gallery                     -->
-<!-- ============================================ -->
-
-<section id="gallery-1716">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h2 class="cs-title">Batik Cats</h2>
-            <!--If you remove the cs-text, the rectangle shape will disappear.  If you need to remove it, transfer the :before and .cs-text:last-of-type styles to the cs-title on mobile and desktop-->
-            <p class="cs-text">
-                You can support us by purchasing these cute cats! Handmade with Malaysian batik, these cats can be used as decoration or even door stoppers!<br>
-                <br>100% of the contributions from these cats will also be benefitting the Timorese children and youths.
-            </p>
-            <a href="javascript:void(0);" onclick="openInNewTab('https://forms.gle/ZVLGFpb6PaeUUFsS9')" class="cs-button-solid">Purchase a Cat!</a>
-        </div>
-        <div class="cs-gallery">
-            <picture class="cs-picture cs-picture-1">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)"
-                    srcset="{{ url_for('static', filename='images/cat1.jpg') }}">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)"
-                    srcset="{{ url_for('static', filename='images/cat1.jpg') }}">
-                <img loading="lazy" decoding="async"
-                    src="{{ url_for('static', filename='images/cat1.jpg') }}"
-                    alt="picture" width="480" height="549">
-            </picture>
-            <picture class="cs-picture cs-picture-2">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)"
-                    srcset="{{ url_for('static', filename='images/cat2.jpg') }}">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)"
-                    srcset="{{ url_for('static', filename='images/cat2.jpg') }}">
-                <img loading="lazy" decoding="async"
-                    src="{{ url_for('static', filename='images/cat2.jpg') }}"
-                    alt="picture" width="480" height="549">
-            </picture>
-        </div>
-    </div>
-</section>
                         
 
 
